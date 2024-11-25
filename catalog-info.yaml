@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: opj4owcwi-java-springboot-gitops
+  description: This is GitOps manifest for opj4owcwi-java-springboot   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: opj4owcwi-java-springboot
+    backstage.io/kubernetes-id: opj4owcwi-java-springboot 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: opj4owcwi-java-springboot   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:opj4owcwi-java-springboot
